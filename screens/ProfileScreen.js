@@ -84,31 +84,31 @@ const ProfileScreen = () => {
       <View style={styles.menuWrapper}>
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
-            <Icon name="heart-outline" color="#FF6347" size={25}/>
+            <Icon name="heart-outline" color="#3b58f7" size={25}/>
             <Text style={styles.menuItemText}>Mục yêu thích của bạn</Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
-            <Icon name="credit-card" color="#FF6347" size={25}/>
+            <Icon name="credit-card" color="#3b58f7" size={25}/>
             <Text style={styles.menuItemText}>Thanh toán</Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={myCustomShare}>
           <View style={styles.menuItem}>
-            <Icon name="share-outline" color="#FF6347" size={25}/>
+            <Icon name="share-outline" color="#3b58f7" size={25}/>
             <Text style={styles.menuItemText}>Hãy nói với bạn bè của bạn</Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
-            <Icon name="account-check-outline" color="#FF6347" size={25}/>
+            <Icon name="account-check-outline" color="#3b58f7" size={25}/>
             <Text style={styles.menuItemText}>Hỗ trợ</Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
-            <Icon name="settings-outline" color="#FF6347" size={25}/>
+            <Icon name="settings-outline" color="#3b58f7" size={25}/>
             <Text style={styles.menuItemText}>Cài đặt</Text>
           </View>
         </TouchableRipple>

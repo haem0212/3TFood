@@ -32,7 +32,7 @@ const MainTabScreen = () => (
       component={HomeStackScreen}
       options={{
         tabBarLabel: 'Trang chủ',
-        tabBarColor: '#FF6347',
+        tabBarColor: '#3b58f7',
         tabBarIcon: ({color}) => (
           <Icon name="ios-home" color={color} size={26} />
         ),
@@ -171,6 +171,7 @@ const NotificationStackScreen = ({navigation}) => (
       name="Notifications"
       component={NotificationScreen}
       options={{
+        title: 'Thông báo',
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -229,7 +230,7 @@ const ProfileStackScreen = ({navigation}) => {
       <ProfileStack.Screen
         name="EditProfile"
         options={{
-          title: 'Edit Profile',
+          title: 'Sửa thông tin',
         }}
         component={EditProfileScreen}
       />

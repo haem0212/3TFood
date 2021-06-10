@@ -52,7 +52,6 @@ const HomeScreen = ({navigation}) => {
           </View>
         </Swiper>
       </View>
-
       <View style={styles.categoryContainer}>
         <TouchableOpacity
           style={styles.categoryBtn}

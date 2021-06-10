@@ -3,7 +3,7 @@ export default Users = [
         id: 1, 
         email: 'kai@gmail.com',
         username: 'kai0212', 
-        password: 'password', 
+        password: '12345678', 
         userToken: 'token123'
     },
     {

@@ -113,7 +113,7 @@ export function DrawerContent(props) {
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>
-                    <Drawer.Section title="Hiển thị">
+                    {/* <Drawer.Section title="Hiển thị">
                         <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
                                 <Text>Màu tối</Text>
@@ -122,7 +122,7 @@ export function DrawerContent(props) {
                                 </View>
                             </View>
                         </TouchableRipple>
-                    </Drawer.Section>
+                    </Drawer.Section> */}
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>

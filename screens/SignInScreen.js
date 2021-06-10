@@ -95,26 +95,19 @@ const SignInScreen = ({navigation}) => {
         const foundUser = Users.filter( item => {
             return userName == item.username && password == item.password;
         } );
-
-        if ( data.username.length == 0 || data.password.length == 0 ) {
-            Alert.alert('Tên đăng nhập hoặc mật khẩu không được để trống.', [
-                {text: 'Okay'}
-            ]);
+        if ( data?.username?.length == '' || data?.password?.length == '' ) {
+            Alert.alert('Tên đăng nhập hoặc mật khẩu không được để trống.');
             return;
         }
-
         if ( foundUser.length == 0 ) {
-            Alert.alert('Tên đăng nhập hoặc mật khẩu không tồn tại', [
-                {text: 'Okay'}
-            ]);
+            Alert.alert('Tên đăng nhập hoặc mật khẩu không tồn tại');
             return;
         }
         signIn(foundUser);
     }
-
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#FF6347' barStyle="light-content"/>
+          <StatusBar backgroundColor='#3b58f7' barStyle="light-content"/>
         <View style={styles.header}>
             <Text style={styles.text_header}>Đăng nhập!</Text>
         </View>
@@ -160,8 +153,6 @@ const SignInScreen = ({navigation}) => {
             <Text style={styles.errorMsg}>Tên đăng nhập không hợp lệ</Text>
             </Animatable.View>
             }
-            
-
             <Text style={[styles.text_footer, {
                 color: colors.text,
                 marginTop: 35
@@ -205,10 +196,8 @@ const SignInScreen = ({navigation}) => {
             <Text style={styles.errorMsg}>Mật khẩu không hợp lệ</Text>
             </Animatable.View>
             }
-            
-
             <TouchableOpacity>
-                <Text style={{color: '#FF6347', marginTop:15}}>Quên mật khẩu?</Text>
+                <Text style={{color: '#3b58f7', marginTop:15}}>Quên mật khẩu?</Text>
             </TouchableOpacity>
             <View style={styles.button}>
                 <TouchableOpacity
@@ -216,7 +205,7 @@ const SignInScreen = ({navigation}) => {
                     onPress={() => {loginHandle( data.username, data.password )}}
                 >
                 <LinearGradient
-                    colors={['#FFA07A', '#FF6347']}
+                    colors={['#0d1c6e', '#3b58f7']}
                     style={styles.signIn}
                 >
                     <Text style={[styles.textSign, {
@@ -228,13 +217,13 @@ const SignInScreen = ({navigation}) => {
                 <TouchableOpacity
                     onPress={() => navigation.navigate('SignUpScreen')}
                     style={[styles.signIn, {
-                        borderColor: '#FF6347',
+                        borderColor: '#3b58f7',
                         borderWidth: 1,
                         marginTop: 15
                     }]}
                 >
                     <Text style={[styles.textSign, {
-                        color: '#FF6347'
+                        color: '#3b58f7'
                     }]}>Đăng kí</Text>
                 </TouchableOpacity>
             </View>
@@ -248,7 +237,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#FF6347'
+      backgroundColor: '#3b58f7'
     },
     header: {
         flex: 1,

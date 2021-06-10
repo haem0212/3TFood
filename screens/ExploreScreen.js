@@ -128,34 +128,6 @@ const ExploreScreen = () => {
 
   return (
     <View style={styles.container}>
-      <MapView
-        ref={_map}
-        initialRegion={state.region}
-        style={styles.container}
-        provider={PROVIDER_GOOGLE}
-        customMapStyle={theme.dark ? mapDarkStyle : mapStandardStyle}
-      >
-        {state.markers.map((marker, index) => {
-          const scaleStyle = {
-            transform: [
-              {
-                scale: interpolations[index].scale,
-              },
-            ],
-          };
-          return (
-            <MapView.Marker key={index} coordinate={marker.coordinate} onPress={(e)=>onMarkerPress(e)}>
-              <Animated.View style={[styles.markerWrap]}>
-                <Animated.Image
-                  source={require('../assets/map_marker.png')}
-                  style={[styles.marker, scaleStyle]}
-                  resizeMode="cover"
-                />
-              </Animated.View>
-            </MapView.Marker>
-          );
-        })}
-      </MapView>
       <View style={styles.searchBox}>
         <TextInput 
           placeholder="Tìm kiếm"
@@ -171,7 +143,7 @@ const ExploreScreen = () => {
         showsHorizontalScrollIndicator={false}
         height={50}
         style={styles.chipsScrollView}
-        contentInset={{ // iOS only
+        contentInset={{ 
           top:0,
           left:0,
           bottom:0,
@@ -234,12 +206,12 @@ const ExploreScreen = () => {
                 <TouchableOpacity
                   onPress={() => {}}
                   style={[styles.signIn, {
-                    borderColor: '#FF6347',
+                    borderColor: '#3b58f7',
                     borderWidth: 1
                   }]}
                 >
                   <Text style={[styles.textSign, {
-                    color: '#FF6347'
+                    color: '#3b58f7'
                   }]}>Order Now</Text>
                 </TouchableOpacity>
               </View>

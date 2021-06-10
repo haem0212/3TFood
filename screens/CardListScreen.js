@@ -26,7 +26,6 @@ const CardListScreen = ({navigation}) => {
 };
 
 export default CardListScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1, 

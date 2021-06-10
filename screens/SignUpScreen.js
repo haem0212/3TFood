@@ -27,35 +27,6 @@ const SignInScreen = ({navigation}) => {
         confirm_secureTextEntry: true,
     });
 
-    const textInputChange = (val) => {
-        if( val.length !== 0 ) {
-            setData({
-                ...data,
-                username: val,
-                check_textInputChange: true
-            });
-        } else {
-            setData({
-                ...data,
-                username: val,
-                check_textInputChange: false
-            });
-        }
-    }
-
-    const handlePasswordChange = (val) => {
-        setData({
-            ...data,
-            password: val
-        });
-    }
-
-    const handleConfirmPasswordChange = (val) => {
-        setData({
-            ...data,
-            confirm_password: val
-        });
-    }
 
     const updateSecureTextEntry = () => {
         setData({
@@ -73,7 +44,7 @@ const SignInScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#FF6347' barStyle="light-content"/>
+          <StatusBar backgroundColor='#3b58f7' barStyle="light-content"/>
         <View style={styles.header}>
             <Text style={styles.text_header}>Đăng kí!</Text>
         </View>
@@ -93,7 +64,6 @@ const SignInScreen = ({navigation}) => {
                     placeholder="Tên đăng nhập"
                     style={styles.textInput}
                     autoCapitalize="none"
-                    onChangeText={(val) => textInputChange(val)}
                 />
                 {data.check_textInputChange ? 
                 <Animatable.View
@@ -122,7 +92,6 @@ const SignInScreen = ({navigation}) => {
                     secureTextEntry={data.secureTextEntry ? true : false}
                     style={styles.textInput}
                     autoCapitalize="none"
-                    onChangeText={(val) => handlePasswordChange(val)}
                 />
                 <TouchableOpacity
                     onPress={updateSecureTextEntry}
@@ -157,7 +126,6 @@ const SignInScreen = ({navigation}) => {
                     secureTextEntry={data.confirm_secureTextEntry ? true : false}
                     style={styles.textInput}
                     autoCapitalize="none"
-                    onChangeText={(val) => handleConfirmPasswordChange(val)}
                 />
                 <TouchableOpacity
                     onPress={updateConfirmSecureTextEntry}
@@ -182,7 +150,7 @@ const SignInScreen = ({navigation}) => {
                 Bằng cách đăng ký, bạn đồng ý với
                 </Text>
                 <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>{" "}Điều khoản dịch vụ</Text>
-                <Text style={styles.color_textPrivate}>{" "}and</Text>
+                <Text style={styles.color_textPrivate}>{" "}và</Text>
                 <Text style={[styles.color_textPrivate, {fontWeight: 'bold'}]}>{" "}Chính sách bảo mật</Text>
             </View>
             <View style={styles.button}>
@@ -191,7 +159,7 @@ const SignInScreen = ({navigation}) => {
                     onPress={() => {}}
                 >
                 <LinearGradient
-                    colors={['#FFA07A', '#FF6347']}
+                    colors={['#0d1c6e', '#3b58f7']}
                     style={styles.signIn}
                 >
                     <Text style={[styles.textSign, {
@@ -203,13 +171,13 @@ const SignInScreen = ({navigation}) => {
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
                     style={[styles.signIn, {
-                        borderColor: '#FF6347',
+                        borderColor: '#3b58f7',
                         borderWidth: 1,
                         marginTop: 15
                     }]}
                 >
                     <Text style={[styles.textSign, {
-                        color: '#FF6347'
+                        color: '#3b58f7'
                     }]}>Đăng nhập</Text>
                 </TouchableOpacity>
             </View>
@@ -224,7 +192,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#FF6347'
+      backgroundColor: '#3b58f7'
     },
     header: {
         flex: 1,
