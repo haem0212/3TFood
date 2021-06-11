@@ -91,7 +91,6 @@ const SignInScreen = ({navigation}) => {
     }
 
     const loginHandle = (userName, password) => {
-
         const foundUser = Users.filter( item => {
             return userName == item.username && password == item.password;
         } );

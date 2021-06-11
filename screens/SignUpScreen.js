@@ -167,7 +167,6 @@ const SignInScreen = ({navigation}) => {
                     }]}>Đăng kí</Text>
                 </LinearGradient>
                 </TouchableOpacity>
-
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
                     style={[styles.signIn, {

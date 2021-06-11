@@ -15,7 +15,6 @@ import { useTheme } from '@react-navigation/native';
 
 const SplashScreen = ({navigation}) => {
     const { colors } = useTheme();
-
     return (
       <View style={styles.container}>
           <StatusBar backgroundColor='#3b58f7' barStyle="light-content"/>
